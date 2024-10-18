@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Ejercicios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#ejercicio1">Completa los Espacios en Blanco</a></li>
+            <li><a href="#ejercicio2">Verdadero o Falso</a></li>
+            <li><a href="#ejercicio3">Preguntas Abiertas</a></li>
+            <li><a href="#juegoMemoria">Juego de Memoria</a></li>
+            <li><a href="#revisionRapida">Revisión Rápida</a></li>
+        </ul>
+    </nav>
+    <button id="botonModo" onclick="toggleModo()">Alternar Modo Noche/Día</button>
+</header>
+
+
+<main>
+    <!-- Sección de Completa los Espacios en Blanco -->
+    <section id="ejercicio1">
+        <h1>Completa los Espacios en Blanco</h1>
+        <form id="ejercicio1-form">
+            <div class="pregunta">
+                <p>1. Un <input type="text" id="respuesta1" placeholder="Respuesta"> es una computadora que, formando parte de una red, provee servicios a otras computadoras denominadas clientes.</p>
+            </div>
+            <div class="pregunta">
+                <p>2. <input type="text" id="respuesta2" placeholder="Respuesta"> es un servidor que añade capacidad multimedia a los sitios web permitiéndoles mostrar contenido multimedia.</p>
+            </div>
+            <div class="pregunta">
+                <p>3. <input type="text" id="respuesta3" placeholder="Respuesta"> es un servidor que ofrece una mejor manera de manejar listas de correo electrónico.</p>
+            </div>
+            <div class="pregunta">
+                <p>4. Una Red <input type="text" id="respuesta4" placeholder="Respuesta"> es un modelo de red distribuida donde cada computadora administra sus permisos y recursos.</p>
+            </div>
+            <div class="pregunta">
+                <p>5. <input type="text" id="respuesta5" placeholder="Respuesta"> es la componente más a la derecha en la estructura del nombre de dominio, está definida por una autoridad global.</p>
+            </div>
+            <div class="pregunta">
+                <p>6. <input type="text" id="respuesta6" placeholder="Respuesta"> son conceptos lógicos que no requieren corresponder a localizaciones físicas de las organizaciones.</p>
+            </div>
+            <div class="pregunta">
+                <p>7. <input type="text" id="respuesta7" placeholder="Respuesta"> es un registro DNS que contiene el alias de un nombre de dominio a otro.</p>
+            </div>
+            <div class="pregunta">
+                <p>8. <input type="text" id="respuesta8" placeholder="Respuesta"> son las direcciones IP disponibles para su concesión por parte del servidor DHCP a los clientes.</p>
+            </div>
+            <div class="pregunta">
+                <p>9. <input type="text" id="respuesta9" placeholder="Respuesta"> es un protocolo implementado por un servidor web.</p>
+            </div>
+            <div class="pregunta">
+                <p>10. <input type="text" id="respuesta10" placeholder="Respuesta"> es un servidor web de Linux.</p>
+            </div>
+            <div class="pregunta">
+                <p>11. <input type="text" id="respuesta11" placeholder="Respuesta"> es el punto de administración único y acceso completo del usuario a los recursos de directorios al iniciar sesión una vez.</p>
+            </div>
+            <div class="pregunta">
+                <p>12. <input type="text" id="respuesta12" placeholder="Respuesta"> establecen rutas de nomenclatura como nombre completo CD=Suzan Fine, OU=Sales, DC=contoso, DC=msft.</p>
+            </div>
+            <div class="pregunta">
+                <p>13. <input type="text" id="respuesta13" placeholder="Respuesta"> es una red privada que se extiende, mediante encapsulación y encriptación, a distintos puntos remotos mediante el uso de una red pública.</p>
+            </div>
+            <div class="pregunta">
+                <p>14. Packet Filtering, Proxy Servers y <input type="text" id="respuesta14" placeholder="Respuesta"> son las 3 categorías básicas de firewalls.</p>
+            </div>
+            <div class="pregunta">
+                <p>15. <input type="text" id="respuesta15" placeholder="Respuesta"> es la simulación de un hardware suficiente para permitir un sistema operativo huésped.</p>
+            </div>
+            <div class="pregunta">
+                <p>16. <input type="text" id="respuesta16" placeholder="Respuesta"> es un servicio de virtualización de Microsoft a partir de Windows Server 2008.</p>
+            </div>
+
+            <button type="button" onclick="verificarRespuestas()">Verificar Respuestas</button>
+        </form>
+        <div id="resultado"></div>
+    </section>
+
+
+    <hr class="separador">
+
+    <!-- Sección de Verdadero o Falso -->
+    <section id="ejercicio2">
+        <h1>Ejercicio de Verdadero o Falso</h1>
+        <form id="ejercicio2-form">
+            <div class="pregunta">
+                <p>1. Los servidores DNS solo conocen nombres completos FQDNs.</p>
+                <label><input type="radio" name="pregunta1" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta1" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>2. El dominio DNS de una organización se puede extender por múltiples redes físicas.</p>
+                <label><input type="radio" name="pregunta2" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta2" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>3. El proceso de concesión de direcciones IP por parte del servidor DHCP son 5 pasos.</p>
+                <label><input type="radio" name="pregunta3" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta3" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>4. Los atributos representan los recursos de red en redes Microsoft.</p>
+                <label><input type="radio" name="pregunta4" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta4" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>5. Existen 04 tipos de Grupos: locales, globales, universales y administradores.</p>
+                <label><input type="radio" name="pregunta5" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta5" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>6. Un dominio está formado por árboles, bosques y unidades organizativas.</p>
+                <label><input type="radio" name="pregunta6" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta6" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>7. Mínimo en un dominio tiene que haber un Controlador de Dominio.</p>
+                <label><input type="radio" name="pregunta7" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta7" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>8. La regla Todo Acceso Permitido está por defecto en el ISA Server 2006.</p>
+                <label><input type="radio" name="pregunta8" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta8" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>9. El proxy permite acelerar el acceso a internet por varias PCs dentro de una red.</p>
+                <label><input type="radio" name="pregunta9" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta9" value="falso"> Falso</label>
+            </div>
+            <div class="pregunta">
+                <p>10. La Virtualización ayuda al medio ambiente.</p>
+                <label><input type="radio" name="pregunta10" value="verdadero"> Verdadero</label>
+                <label><input type="radio" name="pregunta10" value="falso"> Falso</label>
+            </div>
+            <button type="button" onclick="verificarVerdaderoFalso()">Verificar Respuestas</button>
+        </form>
+        <div id="resultado-vf"></div>
+    </section>
+
+
+    <hr class="separador">
+
+    <!-- Nueva sección: Preguntas Abiertas -->
+    <section id="ejercicio3">
+        <h1>Ejercicio de Preguntas Abiertas</h1>
+        <form id="ejercicio3-form">
+            <div class="pregunta">
+                <p>1. Menciona 04 ventajas de la virtualización:</p>
+                <textarea id="respuestaAbierta1" rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+                <button type="button" onclick="mostrarRespuesta(1)">Mostrar Respuesta Correcta</button>
+                <p class="respuesta-correcta" id="respuestaCorrecta1">Optimización de recursos, Ahorro de costos, Flexibilidad y escalabilidad, Recuperación ante desastres.</p>
+                <label><input type="checkbox" id="correcta1"> Mi respuesta es correcta</label>
+            </div>
+            <div class="pregunta">
+                <p>2. ¿Qué es Cloud Computing?</p>
+                <textarea id="respuestaAbierta2" rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+                <button type="button" onclick="mostrarRespuesta(2)">Mostrar Respuesta Correcta</button>
+                <p class="respuesta-correcta" id="respuestaCorrecta2">Es un modelo de entrega de servicios informáticos a través de Internet.</p>
+                <label><input type="checkbox" id="correcta2"> Mi respuesta es correcta</label>
+            </div>
+            <!-- Más preguntas abiertas pueden ser añadidas aquí -->
+            <button type="button" onclick="evaluarRespuestasAbiertas()">Evaluar Respuestas</button>
+        </form>
+        <div id="resultado-abiertas"></div>
+    </section>
+
+    <hr class="separador">
+
+    <!-- Nueva sección: Juego de Memoria -->
+    <section id="juegoMemoria">
+        <h1>Juego de Memoria: Empareja los Conceptos con sus Definiciones</h1>
+        <div id="tableroMemoria">
+            <!-- Tarjetas del juego de memoria -->
+            <div class="tarjeta" data-concepto="servidor">Servidor</div>
+            <div class="tarjeta" data-concepto="servidorDef">Una computadora que provee servicios a otras computadoras en una red.</div>
+            <div class="tarjeta" data-concepto="vpn">VPN</div>
+            <div class="tarjeta" data-concepto="vpnDef">Red privada que se extiende por internet mediante encriptación.</div>
+            <div class="tarjeta" data-concepto="dhcp">DHCP</div>
+            <div class="tarjeta" data-concepto="dhcpDef">Protocolo que asigna direcciones IP automáticamente a los clientes.</div>
+            <!-- Añadir más tarjetas según sea necesario -->
+        </div>
+        <button type="button" onclick="iniciarJuegoMemoria()">Iniciar Juego</button>
+        <div id="resultadoMemoria"></div>
+    </section>
+
+    <hr class="separador">
+
+    <!-- Nueva sección: Revisión Rápida -->
+    <section id="revisionRapida">
+        <h1>Revisión Rápida de Conceptos Clave</h1>
+        <div class="tarjeta-revision" onclick="toggleTarjeta(1)">
+            <h3>Servidor</h3>
+            <p id="contenidoTarjeta1" class="contenido-tarjeta">Una computadora que provee servicios a otras computadoras en una red.</p>
+        </div>
+        <div class="tarjeta-revision" onclick="toggleTarjeta(2)">
+            <h3>VPN</h3>
+            <p id="contenidoTarjeta2" class="contenido-tarjeta">Red privada que se extiende por internet mediante encriptación.</p>
+        </div>
+        <div class="tarjeta-revision" onclick="toggleTarjeta(3)">
+            <h3>DHCP</h3>
+            <p id="contenidoTarjeta3" class="contenido-tarjeta">Protocolo que asigna direcciones IP automáticamente a los clientes.</p>
+        </div>
+        <!-- Añadir más tarjetas según sea necesario -->
+    </section>
+
+
+</main>
+
+<script src="scripts.js"></script>
+</body>
+</html>
